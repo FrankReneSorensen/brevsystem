@@ -16,4 +16,14 @@ public class SendAvtaleTilKundeRequest implements Serializable {
 	Avtale avtale;
 	String kilde;
 	
+	
+	public String getKilde() {
+		return kilde;
+	}
+	public void setKilde(String kilde) {
+		this.kilde = kilde;
+	}
+	
+	
+	
 }

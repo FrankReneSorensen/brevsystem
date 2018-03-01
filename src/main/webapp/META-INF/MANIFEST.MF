@@ -9,5 +9,6 @@ Class-Path: cxf-rt-frontend-jaxws-3.0.3.jar xml-resolver-1.2.jar asm-3
  .3.jar neethi-3.0.3.jar spring-web-3.2.6.RELEASE.jar aopalliance-1.0.
  jar spring-aop-3.2.6.RELEASE.jar spring-beans-3.2.6.RELEASE.jar sprin
  g-core-3.2.6.RELEASE.jar commons-logging-1.1.1.jar spring-context-3.2
- .6.RELEASE.jar spring-expression-3.2.6.RELEASE.jar
+ .6.RELEASE.jar spring-expression-3.2.6.RELEASE.jar logback-classic-1.
+ 2.3.jar logback-core-1.2.3.jar slf4j-api-1.7.25.jar
 

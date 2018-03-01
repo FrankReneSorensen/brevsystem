@@ -13,6 +13,15 @@ public class SendAvtaleTilKundeResponse implements Serializable {
 	private static final long serialVersionUID = -9120578552028460191L;
 	String avtaleNummer;
 	
+	public String getAvtaleNummer() {
+		return avtaleNummer;
+	}
+	public void setAvtaleNummer(String avtaleNummer) {
+		this.avtaleNummer = avtaleNummer;
+	}
+	
+	
+	
 	
 
 }
