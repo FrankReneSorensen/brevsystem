@@ -1,0 +1,1 @@
+Ønsker å teste ut mulighet for å lage si moduler som microservices. bruker CXF, og vil prøve å se om vi kan få interceptorer til å virke med open source.
