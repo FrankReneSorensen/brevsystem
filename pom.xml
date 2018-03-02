@@ -26,6 +26,7 @@
 		<logback.version>1.2.3</logback.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<port.number>8080</port.number>
+		<maven-failsafe-plugin.version>2.20.1</maven-failsafe-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -77,6 +78,35 @@
 							<contextPath>/brevsystem</contextPath>
 						</webAppConfig>
 					</configuration>
+					<executions>
+						<execution>
+							<id>start-jetty</id>
+							<phase>pre-integration-test</phase>
+							<goals>
+								<goal>start</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>stop-jetty</id>
+							<phase>post-integration-test</phase>
+							<goals>
+								<goal>stop</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${maven-failsafe-plugin.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>integration-test</goal>
+								<goal>verify</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 
 				<plugin>
@@ -100,6 +130,7 @@
 						<wtpversion>2.0</wtpversion>
 					</configuration>
 				</plugin>
+				
 			</plugins>
 		</pluginManagement>
 	</build>
