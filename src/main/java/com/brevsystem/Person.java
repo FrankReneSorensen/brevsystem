@@ -1,9 +1,24 @@
 package com.brevsystem;
 
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Person")
 public class Person {
-	String fnr;
-	String fornavn;
-	String etternavn;
+	
+	
+	@XmlElement(name = "fnr", required = true)
+	private String fnr;
+	@XmlElement(name = "fornavn", required = true)
+	private String fornavn;
+	@XmlElement(name = "etternavn", required = true)
+	private String etternavn;
+	@XmlElement(name = "mellomnavn")
+	private String mellomnavn;
 	
 	public String getFnr() {
 		return fnr;

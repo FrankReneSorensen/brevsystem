@@ -1,12 +1,53 @@
 package com.brevsystem;
 
+import java.io.Serializable;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+import com.brevsystem.AdresseType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType (name = "Adresse")
 public class Adresse {
 	
 
-	String adresse1;
-	String adresse2;
-	String adresse3;
+	@XmlElement(name = "adresse1", required = true)
+	private String adresse1;
+	@XmlElement(name = "adresse2")
+	private String adresse2;
+	@XmlElement(name = "adresse3")
+	private String adresse3;
+	@XmlElement(name = "poststed", required = true)
+	private String poststed;
+	@XmlElement(name = "postnummer", required = true)
+	private int postnummer;
 	
+	
+	public String getPoststed() {
+		return poststed;
+	}
+	public void setPoststed(String poststed) {
+		this.poststed = poststed;
+	}
+	public int getPostnummer() {
+		return postnummer;
+	}
+	public void setPostnummer(int postnummer) {
+		this.postnummer = postnummer;
+	}
+	@XmlElement(name = "adresseType", required = true)
+	private AdresseType adresseType;
+	
+	
+	public AdresseType getAdresseType() {
+		return adresseType;
+	}
+	public void setAdresseType(AdresseType adresseType) {
+		this.adresseType = adresseType;
+	}
 	public String getAdresse1() {
 		return adresse1;
 	}

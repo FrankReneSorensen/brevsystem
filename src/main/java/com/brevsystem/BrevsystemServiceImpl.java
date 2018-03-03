@@ -2,16 +2,22 @@ package com.brevsystem;
 
 import javax.jws.WebService;
 
+import org.apache.log4j.Logger;
+
 @WebService(endpointInterface = "com.brevsystem.BrevsystemService")
 public class BrevsystemServiceImpl implements BrevsystemService{
+	
+	static final Logger logger = Logger.getLogger(BrevsystemServiceImpl.class);
 
 	@Override
 	public SendAvtaleTilKundeResponse sendAvtale(SendAvtaleTilKundeRequest sendAvtaleTilKundeRequest) {
+		logger.info("Starter sendAvtale");
 		
+		SendAvtaleTilKundeResponse sendAvtaleTilKundeResponse = new SendAvtaleTilKundeResponse();
+		String avtaleId = sendAvtaleTilKundeRequest.avtale.getAvtaleId();
+		sendAvtaleTilKundeResponse.setAvtaleNummer(avtaleId);
 		
-		
-		// TODO Auto-generated method stub
-		return null;
+		return sendAvtaleTilKundeResponse;
 	}
 	
 
