@@ -8,8 +8,9 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Brevapp</name>
-	<description>Java first eksempel på en web tjeneste som mocker et brevsystem. Opplæring wsdl og cxf. Samt test av mulige microservices.</description>
+	<description>Java first eksempel på en web tjeneste som mocker et brevsystem.</description>
 
+	
 	
 	<properties>
 
