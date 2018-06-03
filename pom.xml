@@ -10,10 +10,7 @@
 	<name>Brevapp</name>
 	<description>Java first eksempel på en web tjeneste som mocker et brevsystem. Opplæring wsdl og cxf. Samt test av mulige microservices.</description>
 
-	<organization>
-		<name>Frank Renè Sørensen</name>
-		<url></url>
-	</organization>
+	
 	<properties>
 
 		<cxf.version>3.2.1</cxf.version>

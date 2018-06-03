@@ -11,11 +11,15 @@ public class BrevsystemServiceImpl implements BrevsystemService{
 
 	@Override
 	public SendAvtaleTilKundeResponse sendAvtale(SendAvtaleTilKundeRequest sendAvtaleTilKundeRequest) {
-		logger.info("Starter sendAvtale");
+		logger.info("Sender forsikringsavtale til kunde med fødselsnummer = "+sendAvtaleTilKundeRequest.getPerson().getFnr());
+		
+		//Her skulle det vært kall til SMTP server, etc.
 		
 		SendAvtaleTilKundeResponse sendAvtaleTilKundeResponse = new SendAvtaleTilKundeResponse();
 		String avtaleId = sendAvtaleTilKundeRequest.avtale.getAvtaleId();
 		sendAvtaleTilKundeResponse.setAvtaleNummer(avtaleId);
+		
+		sendAvtaleTilKundeResponse.setKommentar("Avtale er sendt til mottaker med fødselsnummer = "+sendAvtaleTilKundeRequest.getPerson().getFnr());
 		
 		return sendAvtaleTilKundeResponse;
 	}
